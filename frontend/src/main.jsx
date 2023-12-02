@@ -12,14 +12,15 @@ import {
 import App from "./App.jsx";
 import "./index.css";
 import { store } from "./app/store.js";
-import Home from "./pages/Home.jsx";
-import Error from "./pages/Error.jsx";
+import HomePage from "./pages/HomePage";
+import Error from "./pages/PageNotFoundPage.jsx";
 
 //Router
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} errorElement={<Error />}>
-      <Route path="" element={<Home />} />
+      <Route path="/" element={<HomePage />} />
+      <Route path="/" element={<HomePage />} />
     </Route>
   )
 );
