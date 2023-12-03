@@ -3,8 +3,8 @@ import React from "react";
 function SplashPage() {
   return (
     <div>
-      <button>Register</button>
-      <button>Log-in</button>
+      <button className="btn">Register</button>
+      <button className="btn">Log-in</button>
     </div>
   );
 }
