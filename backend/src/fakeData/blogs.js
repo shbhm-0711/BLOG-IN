@@ -61,7 +61,6 @@ export default [
       },
     ],
   },
-
   {
     id: 2,
     auhtor: "abc",
@@ -126,7 +125,7 @@ export default [
   },
   {
     id: 3,
-    auhtor: "abc",
+    auhtor: "xyz",
     time: new Date(),
     tags: ["3D", "WebGPU"],
     blogs: [
