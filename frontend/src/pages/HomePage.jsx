@@ -1,10 +1,9 @@
-import React from "react";
 import Main from "../components/HomePage/Main";
 
 function HomePage() {
   return (
-    <div>
-      <Main></Main>
+    <div className="h-full w-full">
+      <Main />
     </div>
   );
 }
