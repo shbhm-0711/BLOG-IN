@@ -16,17 +16,17 @@ import HomePage from "./pages/HomePage";
 // import Error from "./pages/PageNotFoundPage.jsx";
 // import SplashPage from "./pages/SplashPage.jsx";
 // import ProfilePage from "./pages/ProfilePage.jsx";
-import { LoginPage, ProfilePage, ErrorPage } from "./pages";
+import { LoginPage, ProfilePage, ErrorPage, LandingPage } from "./pages";
 
 //Router
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} errorElement={<ErrorPage />}>
       {/*  using relative path not absolute dont use "/" in nested route */}
-      <Route index element={<HomePage />} />
+      <Route index element={<LandingPage />} />
       <Route path="login" element={<LoginPage />} />
       <Route path="feed" element={<HomePage />} />
-      <Route path=":UserName" element={<ProfilePage />} />
+      <Route path=":userName" element={<ProfilePage />} />
     </Route>
   )
 );

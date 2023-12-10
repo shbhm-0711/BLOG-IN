@@ -6,12 +6,12 @@
 }
 
 .loader-line {
-  width: 350px;
+  width: 344px;
   height: 8px;
   position: relative;
   overflow: hidden;
   background-color: #ddd;
-  margin: -6px 0 0 8px;
+  margin: -18px 0 0 8px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;

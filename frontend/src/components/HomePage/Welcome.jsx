@@ -1,11 +1,22 @@
 import React from "react";
 
-import welcomeImage from "./../../assets/Welcome.jpeg";
+import Img from "./../../assets/cover.png";
+import logo from "./../../assets/rachoGramLogo.png";
 
 function Welcome() {
   return (
-    <div className=" text-black h-[80vh] w-full flex justify-center bg-gray-300 items-center">
-      Welcome page
+    <div className="  h-[80vh] w-full flex justify-between  items-center">
+      <div className="flex flex-col justify-center items-center w-full">
+        <span className="text-3xl">Welcome</span>
+        <span className=" text-2xl ">to</span>
+        <img
+          src={logo}
+          className="w-56"
+          style={{ filter: "invert(1)" }}
+          alt=""
+        />
+      </div>
+      <img className="h-[80vh]" src={Img} alt="" />
     </div>
   );
 }

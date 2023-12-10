@@ -7,3 +7,4 @@ export { default as LoginPage } from "./LoginPage.jsx";
 export { default as ProfilePage } from "./ProfilePage.jsx";
 export { default as SignUpPage } from "./SignUpPage.jsx";
 export { default as SplashPage } from "./SplashPage.jsx";
+export { default as LandingPage } from "./LandingPage.jsx";
