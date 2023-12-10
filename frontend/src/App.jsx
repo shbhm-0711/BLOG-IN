@@ -23,7 +23,9 @@ export default function App() {
         login({ status: authObject?.status, userData: authObject?.userData })
       );
     }
-    setLoading(false);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2 * 1000);
   }, [setLoading, dispatch]);
 
   return loading ? (

@@ -22,10 +22,11 @@ import { LoginPage, ProfilePage, ErrorPage } from "./pages";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} errorElement={<ErrorPage />}>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/login" element={<LoginPage />} />
-      <Route path="/feed" element={<HomePage />} />
-      <Route path="/:UserName" element={<ProfilePage />} />
+      {/*  using relative path not absolute dont use "/" in nested route */}
+      <Route index element={<HomePage />} />
+      <Route path="login" element={<LoginPage />} />
+      <Route path="feed" element={<HomePage />} />
+      <Route path=":UserName" element={<ProfilePage />} />
     </Route>
   )
 );

@@ -2,9 +2,11 @@ import React from "react";
 
 function SplashPage() {
   return (
-    <div>
-      <button className="btn">Register</button>
-      <button className="btn">Log-in</button>
+    <div className=" min-h-screen flex  justify-center items-center ">
+      <div>
+        <span className="text-8xl">रचोgram</span>
+        <div className="loader-line"></div>
+      </div>
     </div>
   );
 }
