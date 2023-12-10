@@ -16,7 +16,14 @@ import HomePage from "./pages/HomePage";
 // import Error from "./pages/PageNotFoundPage.jsx";
 // import SplashPage from "./pages/SplashPage.jsx";
 // import ProfilePage from "./pages/ProfilePage.jsx";
-import { LoginPage, ProfilePage, ErrorPage, LandingPage } from "./pages";
+import {
+  LoginPage,
+  ProfilePage,
+  ErrorPage,
+  LandingPage,
+  SignUpPage,
+  AboutUsPage,
+} from "./pages";
 
 //Router
 const router = createBrowserRouter(
@@ -24,9 +31,11 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />} errorElement={<ErrorPage />}>
       {/*  using relative path not absolute dont use "/" in nested route */}
       <Route index element={<LandingPage />} />
+      <Route path="sign-up" element={<SignUpPage />} />
       <Route path="login" element={<LoginPage />} />
+      <Route path="about-us" element={<AboutUsPage />} />
       <Route path="feed" element={<HomePage />} />
-      <Route path=":userName" element={<ProfilePage />} />
+      <Route path="profile" element={<ProfilePage />} />
     </Route>
   )
 );
