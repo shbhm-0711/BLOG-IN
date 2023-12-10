@@ -7,17 +7,24 @@ function Main() {
   //is login or not
   const status = useSelector((state) => state.status);
   const navigate = useNavigate();
-  useEffect(() => {
+  function call(params) {
     if (status) {
-      fetch(import.meta.env.VITE_BACKEND_ENDPOINT + "/blogs/fake")
+      fetch(import.meta.env.VITE_BACKEND_ENDPOINT + "/blogs")
         .then((res) => res.json())
         .then((resp) => {
           console.log(resp.data);
+        })
+        .catch((err) => {
+          console.log("🚀 ~ file: Main.jsx:11 ~ call ~ err:", err);
+          console.log(err);
         });
     }
     //  else {
     //   navigate("/login");
     // }
+  }
+  useEffect(() => {
+    call();
   }, []);
   return status ? <div>Main</div> : <Welcome />;
 }

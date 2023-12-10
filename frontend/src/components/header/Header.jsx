@@ -8,9 +8,14 @@ function Header() {
   return (
     <nav className="px-5 py-3">
       <ul className="flex justify-between">
-        <li className="mx-3 my-2 px-4 py-2">
+        <li className="mx-3 my-2">
           <Link to={"/"}>
-            <h2>BLOG-IN</h2>
+            <img
+              className="w-32"
+              style={{ filter: "invert(1)" }}
+              src="/rachoGramLogo.png"
+              alt="Racho Gram Logo"
+            />
           </Link>
         </li>
         <div className="flex justify-around">
