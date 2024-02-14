@@ -23,6 +23,8 @@ import {
   LandingPage,
   SignUpPage,
   AboutUsPage,
+  BlogPage,
+  BlogEditPage,
 } from "./pages";
 
 //Router
@@ -34,8 +36,14 @@ const router = createBrowserRouter(
       <Route path="sign-up" element={<SignUpPage />} />
       <Route path="login" element={<LoginPage />} />
       <Route path="about-us" element={<AboutUsPage />} />
-      <Route path="feed" element={<HomePage />} />
       <Route path="profile" element={<ProfilePage />} />
+      <Route path="feed" element={<HomePage />} />
+      <Route path=":blogID" id="blog-detail">
+        {/* use Loader */}
+        <Route index element={<BlogPage />} />
+        <Route path="edit" element={<BlogEditPage />} />
+      </Route>
+      <Route path="new" element />
     </Route>
   )
 );
