@@ -1,7 +1,7 @@
 export default [
   {
     id: 1,
-    auhtor: "Shbhm",
+    author: "Shbhm",
     time: new Date(),
     tags: ["UI"],
     blog: [
@@ -63,10 +63,10 @@ export default [
   },
   {
     id: 2,
-    auhtor: "abc",
+    author: "abc",
     time: new Date(),
     tags: ["UI", "UX"],
-    blogs: [
+    blog: [
       {
         id: 1,
         content: {
@@ -125,10 +125,10 @@ export default [
   },
   {
     id: 3,
-    auhtor: "xyz",
+    author: "xyz",
     time: new Date(),
     tags: ["3D", "WebGPU"],
-    blogs: [
+    blog: [
       {
         id: 1,
         content: {

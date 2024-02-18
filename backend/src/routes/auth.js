@@ -15,7 +15,7 @@ router.get("/", (req, res) => {
 // @route POST /api/auth/login
 // @desc Log in existing user
 router.post("/login", async (req, res) => {
-  console.log("🚀 ~ file: auth.js:13 ~ router.post ~  req.body:", req.body);
+  // console.log("🚀 ~ file: auth.js:13 ~ router.post ~  req.body:", req.body);
   const { email, password } = req.body;
 
   if (!email || !password) {

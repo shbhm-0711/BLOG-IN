@@ -2,6 +2,7 @@ import React from "react";
 
 import Img from "./../../assets/cover.png";
 import logo from "./../../assets/rachoGramLogo.png";
+import { NavLink } from "react-router-dom";
 
 function Welcome() {
   return (
@@ -15,6 +16,9 @@ function Welcome() {
           style={{ filter: "invert(1)" }}
           alt=""
         />
+        <NavLink to={"/feed"} className="btn rounded-md">
+          Explore Yourself
+        </NavLink>
       </div>
       <img className="h-[80vh]" src={Img} alt="" />
     </div>

@@ -25,7 +25,7 @@ export default function App() {
     }
     setTimeout(() => {
       setLoading(false);
-    }, 1 * 1000);
+    }, 2 * 1000);
   }, [setLoading, dispatch]);
 
   return loading ? (

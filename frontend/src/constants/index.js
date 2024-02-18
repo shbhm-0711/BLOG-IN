@@ -3,3 +3,5 @@ export const NAV_LINKS = [
   { id: 2, name: "Sign Up", to: "/sign-up", style: true, auth: true },
   // { id: 3, name: "BLOG-IN", to: "/" },
 ];
+
+export { Sizes } from "./blogParser";
