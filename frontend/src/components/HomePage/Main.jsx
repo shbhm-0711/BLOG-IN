@@ -17,6 +17,7 @@ function Main() {
       .then((res) => res.json())
       .then((res) => {
         if (res.msg !== "OK") {
+          console.log("🚀 ~ file: Main.jsx:20 ~ .then ~ msg:", res.msg);
           setBlogStatus("failed");
           throw new Error("Error fetching, " + res.error);
         } else {

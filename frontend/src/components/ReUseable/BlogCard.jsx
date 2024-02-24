@@ -2,13 +2,11 @@ import React from "react";
 import Card from "./Card";
 import { Sizes } from "../../constants";
 
-function BlogCard({ item }) {
-  const { blog, author, tags, time } = item;
+function BlogCard({ item: { blog, author, tags, time, id } }) {
   const [heading, img, ...body] = blog;
+  console.log("🚀 ~ file: BlogCard.jsx:7 ~ BlogCard ~ heading:", heading);
   let h2 = heading.content.text;
   h2 = h2 ? h2.slice(0, 35) + (h2.length > 35 ? "..." : "") : "Untitled";
-  console.log("🚀 ~ BlogCard ~ h2:", h2);
-  console.log("🚀 ~ BlogCard ~ heading:", heading);
 
   return (
     <Card minW="1">

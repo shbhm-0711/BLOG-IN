@@ -1,10 +1,19 @@
 import React from "react";
+
+import { PiSunFill } from "react-icons/pi";
+import { BiSolidMoon } from "react-icons/bi";
 import { Link } from "react-router-dom";
-import { NAV_LINKS } from "../../constants";
 import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+
+import { NAV_LINKS } from "../../constants";
+import { switchTheme } from "../../app/authSlice";
 
 function Header() {
   const status = useSelector((state) => state.status);
+  const isDarkMode = useSelector((state) => state.isDarkMode);
+  const dispatch = useDispatch();
+
   return (
     <nav className="px-5 py-3">
       <ul className="flex justify-between">
@@ -12,7 +21,7 @@ function Header() {
           <Link to={"/"}>
             <img
               className="w-32"
-              style={{ filter: "invert(1)" }}
+              style={{ filter: isDarkMode ? "invert(1)" : "" }}
               src="/rachoGramLogo.png"
               alt="Racho Gram Logo"
             />
@@ -36,6 +45,14 @@ function Header() {
               </li>
             ) : null;
           })}
+          <div
+            className="mx-3 my-auto text-4xl cursor-pointer  "
+            onClick={() => {
+              dispatch(switchTheme());
+            }}
+          >
+            {isDarkMode ? <PiSunFill /> : <BiSolidMoon />}
+          </div>
         </div>
       </ul>
     </nav>

@@ -3,6 +3,7 @@
 
 import { Outlet } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 import "./App.css";
 import { Footer, Header } from "./components";
@@ -12,6 +13,8 @@ import { SplashPage } from "./pages";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
+  const isDarkMode = useSelector((state) => state.isDarkMode);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -25,13 +28,17 @@ export default function App() {
     }
     setTimeout(() => {
       setLoading(false);
-    }, 2 * 1000);
+    }, 1 * 1000);
   }, [setLoading, dispatch]);
 
   return loading ? (
     <SplashPage />
   ) : (
-    <div className="min-h-screen min-w-screen flex flex-col justify-between">
+    <div
+      className={`${
+        isDarkMode ? "theme-dark" : ""
+      } min-h-screen min-w-screen flex flex-col justify-between bg-skin-fill text-skin-base`}
+    >
       <Header />
       <main>
         <Outlet />
