@@ -35,8 +35,8 @@ function Header() {
                 key={item.id}
                 className={`mx-3 my-2 px-4 py-2 ${
                   item.style
-                    ? "bg-slate-300 text-black rounded-lg mx-0 border border-gray-300 hover:bg-black hover:text-white transition-all"
-                    : ""
+                    ? "bg-skin-button-accent text-black rounded-lg mx-0 border border-gray-300 hover:bg-skin-button-accent-hover hover:text-white transition-all"
+                    : null
                 }`}
               >
                 <Link to={item.to}>

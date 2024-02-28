@@ -19,7 +19,7 @@ function BlogCard({ item: { blog, author, tags, time, id } }) {
         </div>
         <span>
           {tags.map((item) => (
-            <span>#{item}&nbsp;</span>
+            <span key={item}>#{item}&nbsp;</span>
           ))}
         </span>
       </div>
